@@ -78,6 +78,8 @@
     transition: all .3s ease;
     top: 50%;
     opacity: 1;
+    color: #9575cd;
+    text-shadow: #999999 1px 1px 5px;
 }
 .sidebar ul li a{
           display: flex;
@@ -180,11 +182,7 @@
     left: 90%!important;
     
 }
-.sidebar.active .item-menu-{
-    opacity: 1;
-    pointer-events: none;
-    transition: all 0.3s ease;
-}
+
 .sidebar.active .profile-content .profile{
     background-color: #1d1b31;
 }
@@ -195,6 +193,8 @@
 .sidebar.active .item-menu-title{
     opacity: 1;
     font-size: 1.2rem;
+        pointer-events: none;
+    transition: all 0.3s ease;
     
 }
 .sidebar.active .tooltip{
@@ -243,3 +243,8 @@
       transform: rotate(-5deg);
     }
   }
+ .seleccionado{
+        background-color: #ffffff;
+        color: #9575cd!important;
+  }
+  
