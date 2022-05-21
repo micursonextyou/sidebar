@@ -4,6 +4,7 @@
           top:0;          
           left: 0;
           width: 80px;
+          z-index: 1000;
           background: #9575cd;
           padding: 6px 14px;
           transition: all .3s ease;
@@ -213,8 +214,10 @@
           height: 100%;
           width: calc(100%-80px);
           left: 80px;
+          right: 0;
           padding: 1rem;
           transition: all .3s ease;
+          background: #999999;
 }
 .main-content .text{
           font-size: 25px;
@@ -249,12 +252,25 @@
   }
   .settings-panel{
         position:fixed;
+        padding: .3rem 1.3rem;
         right: 0;
-        width: 0;
-        background: #999999;
+        width: 400px;
+        background: #e0e0e0;
         height: 100%;
         box-shadow: 0 1px 15px 0 rgb(0 0 0 / 20%), 0 1px 30px 0 rgb(0 0 0 / 35%);
         
+  }
+  .settings-header{        
+        line-height: 60px; 
+  }
+ 
+  .settings-header::after{
+        content: "";
+        position: absolute;        
+        right: 15px;
+        height: 1px;
+        width: calc(100% - 30px);
+        background-color: rgba(255,255,255,.3);
   }
   .label-setings{
         position: absolute;
@@ -262,14 +278,13 @@
         height: 50px;
         width: 50px;
         left: -50px;
-        background: #999999;
+        background: #9575cd;
         border-radius: 12px 0 0 12px;
         text-align: center;
         margin: 0;
         padding: 0;
   }
-  .label-setings a{
-        
+  .label-setings a{        
         color: #ffffff;
         margin: 0;
         padding: 0;
@@ -281,7 +296,21 @@
         transform: translate(-40%) rotateZ(-80deg);
   }
   .label-setings a i{
-        font-size: 30px;
+        font-size: 25px;
         line-height: 50px;
         text-align: center;
+  }
+   .settings-header h2{
+        font-size: 1.6rem;
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+  }
+  .settings-header i{
+        position: absolute;
+        right: 1.3rem;
+        top: 1.8rem;
+        transform: translate(-100%);
+        font-size: .9rem;
+        font-weight: 600;
   }
