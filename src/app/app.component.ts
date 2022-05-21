@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.control_sidebar();
+    this.control_settings();
   }
   title = 'sidebar3';
   
@@ -28,7 +29,19 @@ export class AppComponent implements OnInit {
         }        
         item_menu[i].classList.add("seleccionado");
       }); 
-    }
+    }    
+  }
+  control_settings(){
+    const btnLabelSetings=document.getElementById("btnLabelSeting");
+    const settingsBar=document.querySelector(".settings-panel");
+    const btnPanelSetting=document.getElementById("btnPanelSetting");
+    btnLabelSetings?.addEventListener("click",()=>{
+      settingsBar?.classList.toggle("openSettings");
+    });
+    btnPanelSetting?.addEventListener("click",()=>{
+      settingsBar?.classList.toggle("openSettings");
+    });
+    
     
   }
 }

@@ -251,17 +251,18 @@
         color: #9575cd!important;
   }
   .settings-panel{
-        position:fixed;
-        padding: .3rem 1.3rem;
+        position:fixed;        
         right: 0;
-        width: 400px;
+        width: 0;
         background: #e0e0e0;
         height: 100%;
         box-shadow: 0 1px 15px 0 rgb(0 0 0 / 20%), 0 1px 30px 0 rgb(0 0 0 / 35%);
-        
+        transition: all .3s ease;
   }
   .settings-header{        
-        line-height: 60px; 
+        line-height: 60px;
+        opacity: 0;
+        transition: all .3s ease;
   }
  
   .settings-header::after{
@@ -283,6 +284,7 @@
         text-align: center;
         margin: 0;
         padding: 0;
+        
   }
   .label-setings a{        
         color: #ffffff;
@@ -313,4 +315,13 @@
         transform: translate(-100%);
         font-size: .9rem;
         font-weight: 600;
+  }  
+  .settings-panel.openSettings{
+        width: 400px;
+        padding: .3rem 1.3rem;
+        transition: all .3s ease;
+  }
+  .settings-panel.openSettings .settings-header{
+        opacity: 1;
+        transition: all .3s ease;
   }
