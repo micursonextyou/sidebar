@@ -247,4 +247,41 @@
         background-color: #ffffff;
         color: #9575cd!important;
   }
-  
+  .settings-panel{
+        position:fixed;
+        right: 0;
+        width: 0;
+        background: #999999;
+        height: 100%;
+        box-shadow: 0 1px 15px 0 rgb(0 0 0 / 20%), 0 1px 30px 0 rgb(0 0 0 / 35%);
+        
+  }
+  .label-setings{
+        position: absolute;
+        top: 120px;
+        height: 50px;
+        width: 50px;
+        left: -50px;
+        background: #999999;
+        border-radius: 12px 0 0 12px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+  }
+  .label-setings a{
+        
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        transform: translate(-40%) rotateZ(0deg);
+        transition: all 0.9s ease;
+  }
+  .label-setings a:hover{
+        transform: translate(-40%) rotateZ(-80deg);
+  }
+  .label-setings a i{
+        font-size: 30px;
+        line-height: 50px;
+        text-align: center;
+  }
